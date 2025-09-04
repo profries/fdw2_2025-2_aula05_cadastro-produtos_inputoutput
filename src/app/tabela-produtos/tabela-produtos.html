@@ -1,6 +1,6 @@
 <div class="container">
     <h2>Tabela de Produtos</h2>
-    @if(listaProdutos.length > 0) {
+    @if(lista.length > 0) {
         <table class="table table-striped table-hover">
             <thead class="table-dark">
                 <tr>
@@ -10,7 +10,7 @@
                 </tr>
             </thead>
             <tbody>
-                @for(produto of listaProdutos; track produto.id) {
+                @for(produto of lista; track produto.id) {
                 <tr>
                     <td>{{produto.id}}</td>
                     <td>{{produto.nome}}</td>

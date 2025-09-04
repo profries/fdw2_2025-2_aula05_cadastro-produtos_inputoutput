@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardProduto } from "../card-produto/card-produto";
 
 @Component({
@@ -8,7 +8,7 @@ import { CardProduto } from "../card-produto/card-produto";
   styleUrl: './list-card-produtos.css'
 })
 export class ListCardProdutos {
-  listaProdutos: any[] = [
+  @Input("lista") listaProdutos: any[] = [
     {id: 1, nome:"Produto 1", preco: 100},
     {id: 2, nome:"Produto 2", preco: 200},
     {id: 3, nome:"Produto 3", preco: 300},
