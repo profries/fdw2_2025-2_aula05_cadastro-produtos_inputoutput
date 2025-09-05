@@ -4,7 +4,13 @@
     <div class="row">
     @for(prod of listaProdutos; track prod.id) {
         <div class="col col-xl-3 col-lg-4 col-sm-6 col-12">
-            <app-card-produto class="p-3" [produto]="prod"></app-card-produto>
+            <app-card-produto class="p-3">
+                <img titulo src="/imagem.png" alt="produto" class="card-img-top">
+                <div conteudo>
+                    <h5 class="card-title">{{prod.nome}}</h5>
+                    <p class="card-text">R$ {{prod.preco}}</p>            
+                </div>
+            </app-card-produto>
         </div>
     }
     </div>

@@ -7,5 +7,4 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card-produto.css'
 })
 export class CardProduto {
-  @Input() produto: any = { id:1, nome:"Produto 1", preco: 100 };
 }
