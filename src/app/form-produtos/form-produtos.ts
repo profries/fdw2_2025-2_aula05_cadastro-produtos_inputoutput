@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,10 +10,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class FormProdutos {
   produto: any = {id: 0, nome:"", preco:0};
-  listProdutos: any[] = [];
+  @Output() onSalvar = new EventEmitter<any>();
 
-  cadastrarProduto(){ 
-    this.listProdutos.push(this.produto);
+  cadastrarProduto(){
+    this.onSalvar.emit(this.produto); 
     alert("Produto cadastrado com sucesso!")
     this.produto = {id: 0, nome:"", preco:0};
   }

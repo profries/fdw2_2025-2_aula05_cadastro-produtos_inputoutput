@@ -23,14 +23,4 @@
     </div>
 
     {{produto | json}}
-    <ul>
-        @for(prod of listProdutos; track prod.id) {
-            <li>
-                {{prod | json}}
-            </li>
-        }
-        @empty {
-            <p>Lista de produtos vazia!</p>
-        }
-    </ul>
 </div>

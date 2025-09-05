@@ -16,4 +16,8 @@ export class App {
     {id: 3, nome:"Produto 3", preco: 300},
     {id: 4, nome:"Produto 4", preco: 400},
   ];
+
+  addProduto(produto:any) {
+    this.listaProdutos.push(produto);
+  }
 }
